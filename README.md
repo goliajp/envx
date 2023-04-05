@@ -44,7 +44,7 @@ var IsTestMode = envx.Get("is_test_mode", false)
 // MYSQL_PORT=63306 -> MysqlPort = 63306
 var MysqlPort = envx.Get("mysql_port", 3306)
 
-// example 5
+// example 5:
 // Get a time.Time environment variable with a default value
 // DATE_TIME="2022-12-25 12:00:00" -> DateTime = time.Date(2022, 12, 25, 12, 0, 0, 0, time.UTC)
 var DateTime = envx.Get("date_time", time.Date(2023, 4, 5, 18, 7, 0, 0, time.UTC))
