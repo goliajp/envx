@@ -16,6 +16,7 @@ import (
 // example 2: var AppName = envx.Get("app_name", "myapp")
 // example 3: var IsTestMode = envx.Get("is_test_mode", false)
 // example 4: var MysqlPort = envx.Get("mysql_port", 3306)
+// example 5: var DateTime = envx.Get("date_time", time.Date(2023, 4, 5, 18, 7, 0, 0, time.UTC))
 func Get[T int | float64 | bool | string | time.Duration | time.Time](k string, v T) T {
 	// default value
 	str := os.Getenv(strings.ToUpper(k))
@@ -54,7 +55,7 @@ func Get[T int | float64 | bool | string | time.Duration | time.Time](k string, 
 		}
 		*rv = d
 	case *time.Time:
-		t, err := time.Parse(str, "2006-01-02 15:04:05")
+		t, err := time.Parse(time.DateTime, str)
 		if err != nil {
 			log.Fatalf("convert str to time.Time failed: %v", err)
 		}
