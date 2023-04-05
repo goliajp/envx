@@ -64,7 +64,7 @@ func Get[T int | float64 | bool | string | time.Duration | time.Time](k string, 
 	}
 
 	// log
-	if cfg.IsLog {
+	if Config.IsLog {
 		fmt.Printf("%s: %v\n", strings.ToLower(k), v)
 	}
 	return v
