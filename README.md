@@ -3,6 +3,10 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/goliajp/envx)](https://goreportcard.com/report/github.com/goliajp/envx)
 [![GoDoc](https://godoc.org/github.com/goliajp/envx?status.svg)](https://godoc.org/github.com/goliajp/envx)
 
+---
+[简体中文](README_CN.md)
+[日本語](README_JP.md)
+
 EnvX is a simple and powerful Go utility library for managing environment variables in your Go applications. It makes it easy to get environment variables with default values and proper types.
 
 ## Installation
