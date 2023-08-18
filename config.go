@@ -1,13 +1,13 @@
 package envx
 
-type Config struct {
+type config struct {
 	IsLog bool `json:"isLog"`
 }
 
-var cfg = Config{
-	IsLog: true,
+func (c *config) SetIsLog(v bool) {
+	c.IsLog = v
 }
 
-func SetConfig(cfg Config) {
-	cfg = cfg
+var Config = &config{
+	IsLog: true,
 }
